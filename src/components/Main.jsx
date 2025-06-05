@@ -6,10 +6,11 @@ const Main = () => {
   return (
     <div className="flex h-screen max-w-7xl flex-col items-center justify-center gap-20">
       <div className="mb-10 flex w-full flex-col items-start gap-5">
-        <UserCheck2 className="size-9 text-teal-300" />
-        <h1 className="w-full break-keep text-5xl font-semibold md:text-6xl">
+        <UserCheck2 className="size-9 text-teal-400" />
+
+        <h1 className="relative z-10 w-full break-keep text-5xl font-semibold md:text-6xl">
           김민준,
-          <span className="mb-4 inline-block text-teal-200">FRONTEND</span>
+          <span className="mb-4 inline-block text-teal-400">FRONTEND</span>
           <br />
           DEVELOPER
         </h1>
@@ -21,14 +22,14 @@ const Main = () => {
 
         <div className="flex gap-8">
           <button
-            className="mt-4 flex w-[140px] items-center justify-between rounded-full border border-indigo-200 p-3 text-xs"
+            className="mt-4 flex w-[140px] items-center justify-between rounded-full border border-indigo-200 p-3 text-xs hover:scale-105 hover:animate-glowPulse hover:text-white"
             onClick={() => window.open("https://github.com/ckx9798", "_blank")}
           >
             GitHub
             <ChevronRight size={12} />
           </button>
           <button
-            className="mt-4 flex w-[140px] items-center justify-between rounded-full border border-indigo-200 p-3 text-xs"
+            className="mt-4 flex w-[140px] items-center justify-between rounded-full border border-indigo-200 p-3 text-xs hover:scale-105 hover:animate-glowPulse hover:text-white"
             onClick={() =>
               window.open("https://velog.io/@ckx9798/posts", "_blank")
             }
