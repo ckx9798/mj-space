@@ -94,19 +94,31 @@ export default function ProjectPage() {
         viewport={{ once: false, amount: 0.25 }}
       >
         <motion.div variants={textVariant()}>
-          <FolderGit2 size={40} className="text-teal-300" />
-          <p className="text-sm text-gray-500">Recent Works</p>
-          <h2 className="text-3xl leading-loose text-white/90">Projects</h2>
+          <FolderGit2 size={40} className="mb-2 text-teal-300" />
+          <p className="text-sm text-gray-400">Recent Works</p>
+          <h2 className="text-4xl font-extrabold leading-relaxed text-white">
+            Projects
+          </h2>
         </motion.div>
 
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mb-12 text-sm leading-loose text-white/60"
+          className="mb-12 mt-2 text-sm leading-loose text-white"
         >
           <span>
-            부트캠프에서 진행한 프로젝트, 개인 프로젝트, 인턴 프로젝트 등
+            부트캠프 / 인턴 프로젝트에서 백엔드, 디자이너와 협업을 통해 실제
+            서비스 개발 프로세스를 경험하며 역할 간 커뮤니케이션과 협업 방법을
+            익히고,{" "}
           </span>
-          <span>다양한 프로젝트에 적극적으로 참여했습니다.</span>
+          <span>개인 프로젝트를 통해</span>
+          <span>
+            프로젝트 기획부터 개발, 배포까지 End-to-End 경험을 쌓으며 서비스
+            전체 흐름 이해하며,
+            <br />
+            <strong className="text-blue-300">
+              스스로 성장하고 문제를 해결하는 역량을 꾸준히 키워오고 있습니다
+            </strong>
+          </span>
         </motion.p>
       </motion.section>
 
