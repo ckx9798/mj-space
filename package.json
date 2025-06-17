@@ -9,11 +9,28 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^10.3.0",
+    "@react-three/fiber": "^9.1.2",
+    "@react-three/rapier": "^2.1.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "clsx": "^2.1.1",
     "framer-motion": "^12.12.2",
+    "highlight.js": "^11.11.1",
     "lucide-react": "^0.511.0",
+    "meshline": "^3.3.1",
     "next": "15.1.8",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-globe.gl": "^2.33.2",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.6.1",
+    "react-syntax-highlighter": "^15.6.1",
+    "react-tsparticles": "^2.12.2",
+    "rehype-highlight": "^7.0.2",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.1",
+    "three": "^0.177.0",
+    "tsparticles": "^3.8.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -22,6 +39,7 @@
     "postcss": "^8",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
+    "raw-loader": "^4.0.2",
     "tailwindcss": "^3.4.1"
   }
 }
