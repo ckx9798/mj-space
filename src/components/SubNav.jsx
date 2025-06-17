@@ -47,7 +47,6 @@ export default function SubNav() {
   return (
     <div className="sticky top-52 hidden space-y-7 self-start opacity-100 transition-all md:block">
       {NAV_ITEMS.map(({ label, description, href, number, isExternal }) => {
-        // isActive: 현재 경로가 href와 일치하거나, href로 시작하면서 바로 뒤에 '/'가 오는 경우
         const isActive =
           !isExternal && (pathname === href || pathname.startsWith(href + "/"));
 
