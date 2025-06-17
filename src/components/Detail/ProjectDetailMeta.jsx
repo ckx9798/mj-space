@@ -9,7 +9,7 @@ export default function ProjectDetailMeta({ project }) {
         {project.tech.map((t) => (
           <span
             key={t}
-            className="rounded-full bg-gradient-to-tr from-[#14b8a6] to-[#6366f1] px-2 py-1 text-xs font-semibold text-white shadow sm:text-sm md:px-3"
+            className="rounded-full bg-gradient-to-tr from-[#14b8a6] to-[#6366f1] px-2 py-2 text-center text-[10px] font-semibold text-white shadow md:w-40 md:px-3 md:text-sm"
           >
             {t}
           </span>

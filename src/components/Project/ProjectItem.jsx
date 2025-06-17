@@ -33,7 +33,7 @@ export default function ProjectItem({ project }) {
             <h2 className="w-full text-lg font-bold md:w-[400px] md:text-2xl">
               {title}
             </h2>
-            <div className="my-2 text-sm md:text-base">- {description}</div>
+            <div className="my-2 text-sm md:text-base">🌱{description}</div>
           </div>
 
           <div className="flex flex-col gap-4">
@@ -42,7 +42,7 @@ export default function ProjectItem({ project }) {
               {tech.map((skill) => (
                 <span
                   key={skill}
-                  className="rounded-md border border-gray-600 bg-gray-700 px-1 py-1 font-mono text-xs text-blue-400 md:px-3 md:text-sm"
+                  className="rounded-md border border-gray-600 bg-gray-700 px-1 py-1 font-mono text-[10px] text-blue-400 md:px-3 md:text-sm"
                 >
                   {`#${skill}`}
                 </span>
@@ -51,7 +51,7 @@ export default function ProjectItem({ project }) {
 
             {/* 진행 기간 */}
             <div className="flex flex-wrap gap-2">
-              <span className="rounded-md border border-gray-600 bg-gray-700 px-1 py-1 font-mono text-xs text-purple-300 md:px-3 md:text-sm">
+              <span className="rounded-md border border-gray-600 bg-gray-700 px-1 py-1 font-mono text-[10px] text-purple-300 md:px-3 md:text-sm">
                 {`<${duration}>`}
               </span>
             </div>

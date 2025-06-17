@@ -8,7 +8,7 @@ import { useState } from "react";
 
 const Main = () => {
   return (
-    <div className="flex h-screen flex-col justify-center gap-20 text-white md:-mt-10">
+    <div className="mb-32 flex h-screen flex-col justify-center gap-20 text-white md:-mt-10">
       <div className="flex flex-col gap-5">
         <IntroSection />
         <PostToggleButton />
@@ -72,13 +72,13 @@ const PostToggleButton = () => {
 
     setTimeout(() => {
       router.push("/about");
-    }, 800); // 애니메이션이 끝난 후 이동
+    }, 800);
   };
 
   const buttonClassName = `
-    flex w-full rounded-lg border border-white/90 px-8 py-4 md:py-7
+    flex w-full rounded-lg border border-white/90 md:px-8 md:py-7 items-center px-2
     text-sm font-semibold text-white/90 transition hover:scale-105 
-    hover:animate-glowPulse sm:w-[360px]
+    animate-glowPulse sm:w-[360px] hover:text-teal-400
   `;
 
   return (
@@ -101,7 +101,7 @@ const PostToggleButton = () => {
               animate={
                 isFlying ? { x: 1300, y: -800, opacity: 1, rotate: -25 } : {}
               }
-              transition={{ duration: 0.7 }}
+              transition={{ duration: 0.8 }}
               className="relative"
             >
               {/* 반짝이는 불빛 */}

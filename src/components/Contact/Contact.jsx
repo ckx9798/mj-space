@@ -21,7 +21,7 @@ export default function Contact() {
     >
       <motion.div variants={textVariant()}>
         <FolderGit2 size={40} className="mb-2 text-teal-300" />
-        <p className="text-sm text-gray-400">minjun</p>
+        <p className="text-sm text-gray-400">Minjun</p>
         <h2 className="text-4xl font-extrabold leading-relaxed text-white">
           Contact Me
         </h2>

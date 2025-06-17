@@ -5,7 +5,7 @@ export default function ContactFooterMessage() {
   return (
     <motion.p
       variants={fadeIn("", "", 0.2, 1)}
-      className="mt-10 text-center text-sm leading-relaxed text-gray-500"
+      className="mb-4 mt-10 text-center text-sm leading-relaxed text-gray-500"
     >
       포트폴리오에 관심 가져주셔서 감사합니다.
       <br />

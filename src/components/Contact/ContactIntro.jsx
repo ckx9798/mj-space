@@ -1,3 +1,4 @@
+import GradientText from "../Animation/Bits/GradientText";
 import { motion } from "framer-motion";
 import { textVariant } from "@/utils/motion";
 
@@ -17,10 +18,14 @@ export default function ContactIntro() {
         </div>
 
         {/* 사용자 정보 */}
-        <div className="relative z-10 mb-6 mt-4 flex flex-col items-center">
-          <h3 className="mb-2 bg-gradient-to-r from-teal-300 via-blue-300 to-blue-400 bg-clip-text text-2xl font-bold text-transparent text-white">
+        <div className="relative z-10 mt-4 flex flex-col items-center md:mb-6">
+          <GradientText
+            colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+            animationSpeed={4}
+            className="custom-class mb-2 text-3xl"
+          >
             김 민 준
-          </h3>
+          </GradientText>
           <p className="text-base font-semibold text-white/80">
             FrontEnd Developer
           </p>

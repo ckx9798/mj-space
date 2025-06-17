@@ -18,13 +18,13 @@ export default function ProjectDetailHeader({ project, isTeam }) {
         </p>
       </div>
 
-      <div className="flex gap-3">
+      <div className="my-2 flex gap-3">
         {project.site && (
           <a
             href={project.site}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 rounded-lg border border-blue-400 bg-white/30 px-3 py-1.5 text-xs font-semibold text-blue-600 shadow transition hover:bg-blue-50/60 sm:text-sm"
+            className="inline-flex items-center gap-1 rounded-lg border border-blue-400 bg-white/30 px-1 py-1.5 text-[10px] font-semibold text-blue-600 shadow transition hover:bg-blue-50/60 md:px-3"
           >
             <ExternalLink size={16} /> Live Site
           </a>
@@ -34,7 +34,7 @@ export default function ProjectDetailHeader({ project, isTeam }) {
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 rounded-lg border border-gray-400 bg-white/30 px-3 py-1.5 text-xs font-semibold text-gray-700 shadow transition hover:bg-gray-100/60 sm:text-sm"
+            className="inline-flex items-center gap-1 rounded-lg border border-gray-400 bg-white/30 px-3 py-1.5 text-[10px] font-semibold text-gray-700 shadow transition hover:bg-gray-100/60"
           >
             <FolderGit2 size={16} /> GitHub
           </a>
