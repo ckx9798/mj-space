@@ -25,13 +25,4 @@ export const BLOG_POST_LIST = [
     sub_group_name: "LightHouse",
     link: "https://velog.io/@ckx9798/series/%EC%84%B1%EB%8A%A5%EC%B5%9C%EC%A0%81%ED%99%94",
   },
-  {
-    post_id: 3,
-    post_title: "성능최적화 3단계로 성능점수 100점 도전해보기",
-    post_description:
-      "코드스플리팅, 텍스트압축, 이미지 최적화를 통한 LightHouse 점수 올리기",
-    created_at: "2025-04-22T15:10:00Z",
-    sub_group_name: "LightHouse",
-    link: "https://velog.io/@ckx9798/series/%EC%84%B1%EB%8A%A5%EC%B5%9C%EC%A0%81%ED%99%94",
-  },
 ];

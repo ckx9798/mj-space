@@ -1,7 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronRight, Milestone } from "lucide-react";
 
+import GradientText from "../Animation/Bits/GradientText";
 import RecentPosts from "./RecentPost";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 const Main = () => {
@@ -19,19 +21,27 @@ const IntroSection = () => {
   return (
     <div className="flex flex-col items-start justify-center">
       <div className="w-full max-w-3xl">
-        <div className="ml-2 flex items-center">
-          <hr className="mr-1 w-6 border-teal-300 md:w-20" />
-          <h4 className="mb-3 block text-sm text-teal-300 md:text-lg">
+        <div className="mb-4 ml-2 flex items-center">
+          <hr className="mr-1 mt-4 w-3 border-teal-300 md:w-20" />
+          <GradientText
+            colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+            animationSpeed={4}
+            className="custom-class"
+          >
             who is he?
-          </h4>
+          </GradientText>
         </div>
 
-        <h1 className="mb-4 break-keep text-4xl font-semibold text-white md:text-6xl">
+        <h1 className="mb-4 break-keep text-4xl font-semibold text-white md:mb-8 md:text-6xl">
           김민준
           <br />
-          <span className="my-4 inline-block text-teal-400 md:ml-2">
+          <GradientText
+            colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+            animationSpeed={4}
+            className="custom-class"
+          >
             FRONTEND DEVELOPER
-          </span>
+          </GradientText>
         </h1>
 
         <span className="text-md md:text-xl">
@@ -52,11 +62,21 @@ const IntroSection = () => {
 
 const PostToggleButton = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isFlying, setIsFlying] = useState(false);
+  const router = useRouter();
 
   const togglePost = () => setIsOpen((prev) => !prev);
 
+  const handleMoveClick = () => {
+    setIsFlying(true);
+
+    setTimeout(() => {
+      router.push("/about");
+    }, 800); // 애니메이션이 끝난 후 이동
+  };
+
   const buttonClassName = `
-    flex w-full rounded-lg border border-white/90 px-8 py-5 
+    flex w-full rounded-lg border border-white/90 px-8 py-4 md:py-7
     text-sm font-semibold text-white/90 transition hover:scale-105 
     hover:animate-glowPulse sm:w-[360px]
   `;
@@ -65,15 +85,39 @@ const PostToggleButton = () => {
     <div className="flex flex-col pb-20">
       <div className="space-y-2">
         <div className="relative">
-          <button className={buttonClassName} onClick={togglePost}>
-            <Milestone size={20} className="mr-2" />
-            주요 블로그 포스팅 보기
-            <ChevronRight
-              size={15}
-              className="text-foreground/30 ml-auto mt-1 opacity-50 transition-all group-hover:opacity-100"
-            />
-          </button>
+          <div className="flex gap-12">
+            {/* 블로그 토글 버튼 */}
+            <button className={buttonClassName} onClick={togglePost}>
+              <Milestone size={20} className="mr-2" />
+              주요 블로그 포스팅 보기
+              <ChevronRight
+                size={15}
+                className="text-foreground/30 ml-auto mt-1 opacity-50 transition-all group-hover:opacity-100"
+              />
+            </button>
 
+            {/* 비행기 이동 버튼 */}
+            <motion.span
+              animate={
+                isFlying ? { x: 1300, y: -800, opacity: 1, rotate: -25 } : {}
+              }
+              transition={{ duration: 0.7 }}
+              className="relative"
+            >
+              {/* 반짝이는 불빛 */}
+              <div className="absolute bottom-6 left-1/2 z-0 h-7 w-7 -translate-x-1/2 animate-glowPulse rounded-full bg-teal-400 blur-sm"></div>
+
+              {/* 로켓 */}
+              <div
+                className="relative z-10 flex cursor-pointer rounded-full border-none px-4 py-5 text-3xl transition hover:scale-125"
+                onClick={handleMoveClick}
+              >
+                🚀
+              </div>
+            </motion.span>
+          </div>
+
+          {/* 블로그 포스트 토글 영역 */}
           <AnimatePresence>
             {isOpen && (
               <motion.div
