@@ -28,8 +28,11 @@ export default function Document() {
           content="FrontEnd Developer 김민준 포트폴리오입니다."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://your-portfolio-url.com" />
-        <meta property="og:image" content="/og-image.png" />
+        <meta property="og:url" content="www.minjun.space" />
+        <meta
+          property="og:image"
+          content="https://i.ibb.co/Bx8JYbQ/Chat-GPT-Image-2025-6-17-05-48-31.png"
+        />
       </Head>
       <body className="antialiased">
         <Main />
