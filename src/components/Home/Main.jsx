@@ -8,7 +8,7 @@ import { useState } from "react";
 
 const Main = () => {
   return (
-    <div className="mb-32 flex h-screen flex-col justify-center gap-20 text-white md:-mt-10">
+    <div className="flex h-screen flex-col justify-center gap-20 text-white md:-mt-10 md:mb-32">
       <div className="flex flex-col gap-5">
         <IntroSection />
         <PostToggleButton />
@@ -21,7 +21,7 @@ const IntroSection = () => {
   return (
     <div className="flex flex-col items-start justify-center">
       <div className="w-full max-w-3xl">
-        <div className="mb-4 ml-2 flex items-center">
+        <div className="ml-2 flex items-center md:mb-1">
           <hr className="mr-1 mt-4 w-3 border-teal-300 md:w-20" />
           <GradientText
             colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
@@ -32,7 +32,7 @@ const IntroSection = () => {
           </GradientText>
         </div>
 
-        <h1 className="mb-4 break-keep text-4xl font-semibold text-white md:mb-8 md:text-6xl">
+        <h1 className="mb-4 break-keep text-4xl font-semibold text-white md:mb-10 md:text-6xl">
           김민준
           <br />
           <GradientText
@@ -75,19 +75,16 @@ const PostToggleButton = () => {
     }, 800);
   };
 
-  const buttonClassName = `
-    flex w-full rounded-lg border border-white/90 md:px-8 md:py-7 items-center px-2
-    text-sm font-semibold text-white/90 transition hover:scale-105 
-    animate-glowPulse sm:w-[360px] hover:text-teal-400
-  `;
-
   return (
-    <div className="flex flex-col pb-20">
+    <div className="flex flex-col pb-10 md:pb-20">
       <div className="space-y-2">
         <div className="relative">
-          <div className="flex gap-12">
+          <div className="flex gap-4 md:gap-12">
             {/* 블로그 토글 버튼 */}
-            <button className={buttonClassName} onClick={togglePost}>
+            <button
+              className="flex w-full animate-glowPulse items-center rounded-lg border border-white/90 px-2 text-sm font-semibold text-white/90 transition hover:scale-105 hover:text-teal-400 sm:w-[360px] md:px-8 md:py-7 lg:text-base"
+              onClick={togglePost}
+            >
               <Milestone size={20} className="mr-2" />
               주요 블로그 포스팅 보기
               <ChevronRight
@@ -99,17 +96,19 @@ const PostToggleButton = () => {
             {/* 비행기 이동 버튼 */}
             <motion.span
               animate={
-                isFlying ? { x: 1300, y: -800, opacity: 1, rotate: -25 } : {}
+                isFlying
+                  ? { x: "80vw", y: "-100vh", opacity: 1, rotate: -15 }
+                  : {}
               }
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 1.3 }}
               className="relative"
             >
               {/* 반짝이는 불빛 */}
-              <div className="absolute bottom-6 left-1/2 z-0 h-7 w-7 -translate-x-1/2 animate-glowPulse rounded-full bg-teal-400 blur-sm"></div>
+              <div className="absolute bottom-3 left-1/2 z-0 h-7 w-7 -translate-x-1/2 animate-glowPulse rounded-full bg-teal-400 blur-sm md:bottom-6"></div>
 
               {/* 로켓 */}
               <div
-                className="relative z-10 flex cursor-pointer rounded-full border-none px-4 py-5 text-3xl transition hover:scale-125"
+                className="relative z-10 flex cursor-pointer rounded-full border-none px-4 py-2 text-3xl transition hover:scale-125 md:py-5"
                 onClick={handleMoveClick}
               >
                 🚀
@@ -125,7 +124,7 @@ const PostToggleButton = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
-                className="absolute left-0 top-full z-10 mt-8 w-full"
+                className="absolute left-0 top-full z-10 mt-10 w-full"
               >
                 <RecentPosts />
               </motion.div>

@@ -31,9 +31,9 @@ export default function ProjectItem({ project }) {
         <div className="flex w-full flex-col justify-between text-flashWhite">
           <div className="flex flex-col">
             <h2 className="w-full text-lg font-bold md:w-[400px] md:text-2xl">
-              {title}
+              ✈ {title}
             </h2>
-            <div className="my-2 text-sm md:text-base">🌱{description}</div>
+            <div className="my-2 text-sm md:text-base">{description}</div>
           </div>
 
           <div className="flex flex-col gap-4">

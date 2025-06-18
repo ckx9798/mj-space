@@ -33,17 +33,20 @@ export default function ProjectIntro() {
       >
         <span>
           부트캠프 / 인턴 프로젝트에서 백엔드, 디자이너와 협업을 통해 실제
-          서비스 개발 프로세스를 경험하며 역할 간 커뮤니케이션과 협업 방법을
-          익히고,{" "}
+          서비스 개발 프로세스를 경험하며 <br />
+          역할 간 커뮤니케이션과 협업 방법을 익히고,
         </span>
+        <br />
         <span>개인 프로젝트를 통해</span>
         <span>
           프로젝트 기획부터 개발, 배포까지 End-to-End 경험을 쌓으며 서비스 전체
           흐름 이해하며,
           <br />
+          <br />
           <strong className="text-blue-300">
-            스스로 성장하고 문제를 해결하는 역량을 꾸준히 키워오고 있습니다
+            스스로 성장하고 문제를 해결하는 역량
           </strong>
+          <span>을 꾸준히 키워오고 있습니다.</span>
         </span>
       </motion.p>
     </motion.section>
