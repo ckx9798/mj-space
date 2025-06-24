@@ -4,7 +4,7 @@ export const PROJECT_LIST = [
     img: "/project/SaveLinks.svg",
     title: "SaveLinks",
     tech: ["React", "TanStack-Query", "Chorom-storage", "Tailwind-CSS"],
-    duration: "2025.01 ~ 2025.05",
+    duration: "2025.01 ~ 2025.06",
     type: "personal",
     description:
       "유튜브, 인스타 등 숏폼 영상을 저장하여 한 페이지에서 관리하는 크롬 익스텐션",
@@ -16,7 +16,7 @@ export const PROJECT_LIST = [
     img: "/project/momodal.svg",
     title: "momodal-library",
     tech: ["React", "TypeScript", "TanStack-Query", "NPM"],
-    duration: "2025.02 ~ 2025.04",
+    duration: "2025.02 ~ 2025.05",
     type: "personal",
     description:
       "알림 모달, 디자인 모달 등 다양한 모달 컴포넌트를 제공하는 React UI 라이브러리",
