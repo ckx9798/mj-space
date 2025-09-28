@@ -1,5 +1,41 @@
 export const PROJECT_LIST = [
   {
+    id: 8,
+    img: "/project/MoMuk.webp",
+    title: "MoMuk",
+    tech: ["Next.js", "React", "TypeScript"],
+    duration: "2025.08 ~ 2025.09",
+    type: "personal",
+    description:
+      '"오늘 뭐 먹지?"에 대한 고민을 해결해주는 음식 랜덤 추천 및 결정 지원 서비스',
+    site: "https://www.momuk.space/",
+    github: "https://github.com/ckx9798/MoMuk",
+  },
+  {
+    id: 7,
+    img: "/project/LightestStore.webp",
+    title: "LightestStore",
+    tech: ["React", "JavaScript", "Zustand"],
+    duration: "2025.08 ~ 2025.09",
+    type: "personal",
+    description:
+      "불필요한 보일러플레이트 없이, 중앙화된 상태 저장소를 통해 즉시 전역상태 관리를 도입할 수 있는 경량 React 상태 관리 라이브러리",
+    site: "https://www.npmjs.com/package/lighteststore",
+    github: "https://github.com/ckx9798/LightestStore",
+  },
+  {
+    id: 6,
+    img: "/project/weLive.webp",
+    title: "Welive",
+    tech: ["Next.js", "TypeScript", "TanStack-Query", "TailwindCSS", "Zustand"],
+    duration: "2025.05 ~ 2025.07",
+    type: "team",
+    members: 5,
+    description: "주민들과 아파트 관리 단체를 위한 상호 관리 플랫폼",
+    site: "https://project-welive-fe.vercel.app/",
+    github: "https://github.com/codeit-bootcamp-nodejs/project-welive-fe",
+  },
+  {
     id: 1,
     img: "/project/SaveLinks.svg",
     title: "SaveLinks",
